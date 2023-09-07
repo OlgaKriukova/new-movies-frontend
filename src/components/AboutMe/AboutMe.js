@@ -1,4 +1,5 @@
 import './AboutMe.css';
+import vitliy from '../../images/Vitaliy.jpg'
 
 function AboutMe() {
     return (
@@ -17,7 +18,7 @@ function AboutMe() {
             </p>
             <p className="about-me__git">Github</p>
             </div>
-            <img src="../../../images/Vitaliy.jpg" className="about-me__photo" alt='фото' />
+            <img src={vitliy} className="about-me__photo" alt='фото' />
         </div>
         </section>
 
