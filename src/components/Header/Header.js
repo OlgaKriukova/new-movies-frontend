@@ -1,26 +1,25 @@
-// import { Link } from "react-router-dom";
-import Navigation from "../Navigation/Navigation";
+import { Link } from "react-router-dom";
 
 import "./Header.css";
 import logo from '../../images/logo.png'
 
-function Header() {
+function Header(props) {
     return(
         <header className="header">
-            <a href="index.html" className="header__logo">
+            <Link to="/" className="header__logo">
                 <img src={logo} alt="смайл" className="header__img" />
-            </a>
-            {/* <button className="header__button-registy">
-                <a href="#" className="header__link-registry">
+            </Link>
+            <button className="header__button-registy">
+                <Link to="/signup" className="header__link-registry">
                 Регистрация
-                </a>
+                </Link>
             </button>
             <button className="header__button-enter">
-                <a href="#" className="header__link-enter">
+                <Link to="/signin" className="header__link-enter">
                 Войти
-                </a>
-            </button> */}
-            <Navigation />
+                </Link>
+            </button>
+            {/* {props.children} */}
         </header>
     );
 }

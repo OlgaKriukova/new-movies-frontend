@@ -1,32 +1,34 @@
 import { Link } from "react-router-dom";
+
 import './Navigation.css';
 
 function Navigation() {
     return (
             <>
                 <div className="header-movies">
-                    <div className="sidebar">
-                        {/* <div className="sidebar__icon" />  */}
-                        <nav className="nav-tab nav-burger nav-burger_active">
+                    {/* <div className="sidebar"> */}
+                        <div className="sidebar__icon" />     
+                        <nav className="nav-tab">
                             
                                 
-                                <a href="№" className="nav-tab__list nav-tab__list_active nav-burger__list nav-burger__list_active">
+                                <Link to="/movies" className="nav-tab__list nav-tab__list_active">
                                     Фильмы
-                                </a>
-                                <a href="№" className="nav-tab__list nav-burger__list">
+                                </Link>
+                                <Link to="/saved-movies" className="nav-tab__list">
                                     Сохранённые фильмы
-                                </a>
-                                <a href="#" className="nav-tab__list nav-tab__list-show nav-burger__list">
+                                </Link>
+                                <Link to="/" className="nav-tab__list nav-tab__list-show">
                                     Главная
-                                </a>
+                                </Link>
                                 
                         </nav>
 
-                        <a href='#' className="nav-tab__account nav-burger__account">
+                        <Link to='/profile' className="nav-tab__account">
                         Аккаунт
-                        <div className="nav-tab__icon nav-burger__icon"></div>
-                        </a>
-                    </div>
+                        <div className="nav-tab__icon"></div>
+                        </Link>
+                    {/* </div> */}
+                    
 
                 </div>
                 <div className="heder-burger" />
