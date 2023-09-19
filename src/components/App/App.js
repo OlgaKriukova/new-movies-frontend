@@ -12,6 +12,8 @@ import Login from '../Login/Login';
 import Register from '../Register/Register';
 import Profile from '../Profile/Profile';
 
+import GeneralForm from '../GeneralForm/GeneralForm';
+
   function App(){
     return (
       <div className="page">
@@ -24,6 +26,8 @@ import Profile from '../Profile/Profile';
             <Route path='/signin' element={<Login />}></Route>
             <Route path='/signup' element={<Register />}></Route>
             <Route path='/profile' element={<Profile />}></Route>
+            <Route path='/gf' element={<GeneralForm />}></Route>
+
           </Routes>
         </div>
     

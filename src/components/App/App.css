@@ -75,8 +75,12 @@
 }
 
 .form__list {
-  display: flex;
+  display: none;
   flex-direction: column;
+}
+
+.form__list_active {
+  display: flex;
 }
 
 .form__label {

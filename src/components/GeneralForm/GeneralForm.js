@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom';
 
-import './Register.css';
+import './GeneralForm.css'
 
-function Register() {
+function GeneralForm() {
     return(
-        <>
-            <div className="form">
+        <div className="form profile-form">
                 <h1 className="title-form">Добро пожаловать!</h1>
                 <form className="form__table">
-                    <div className="form__list">
-                        <label htmlFor="name" className="form__label">
+                    <div className="form__list form__list_active profile-form__wrap">
+                        <label htmlFor="name" className="form__label profile-form__label">
                             Имя
                         </label>
                         <input
@@ -23,8 +22,8 @@ function Register() {
                             defaultValue=""
                         />
                     </div>
-                    <div className="form__list">
-                        <label htmlFor="email" className="form__label">
+                    <div className="form__list form__list_active">
+                        <label htmlFor="email" className="form__label profile-form__label">
                             E-mail
                         </label>
                         <input
@@ -37,7 +36,7 @@ function Register() {
                             maxLength={25}
                         />
                     </div>
-                    <div className="form__list">
+                    <div className="form__list form__list_active">
                         <label htmlFor="password" className="form__label">
                             Пароль
                         </label>
@@ -61,9 +60,7 @@ function Register() {
                     </div>
                 </form>
             </div>
-
-        </>
     );
 }
 
-export default Register;
+export default GeneralForm;
