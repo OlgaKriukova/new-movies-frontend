@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import './GeneralForm.css'
 
 function GeneralForm(props) {
+
     return(
         <div className="form profile-form">
-                <h1 className="title-form">Добро пожаловать!</h1>
+                <h1 className="title-form">{props.titleFormText}</h1>
                 <form className="form__table">
                     {props.existingInputs.includes('name')
-                      ? <div className="form__list form__list_active profile-form__wrap">
-                            <label htmlFor="name" className="form__label profile-form__label">
+                      ? <div className="form__list form__list_active">
+                            <label htmlFor="name" className="form__label">
                                 Имя
                             </label>
                             <input
@@ -27,7 +28,7 @@ function GeneralForm(props) {
                     }
                     {props.isEmailExist
                       ? <div className="form__list form__list_active">
-                            <label htmlFor="email" className="form__label profile-form__label">
+                            <label htmlFor="email" className="form__label">
                                 E-mail
                             </label>
                             <input
@@ -56,11 +57,11 @@ function GeneralForm(props) {
                         <span className="form__input-error">Что-то пошло не так...</span>
                     </div>
                     <div className="reg">
-                    <button className="reg__button">Зарегистрироваться</button>
+                    <button className="reg__button">{props.buttonFormText}</button>
                     <div className="reg__enter">
-                        <p className="reg__enter-text">Уже зарегистрированы?</p>
+                        <p className="reg__enter-text">{props.questionFormText} </p>
                         <Link to="/signin" className="reg__enter-link">
-                        Войти
+                        {props.linkFormText}
                         </Link>
                     </div>
                     </div>
